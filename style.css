@@ -1,0 +1,52 @@
+.wrapper {
+}
+.header {
+   text-align: center;
+}
+.lines-box {
+}
+.line1 {
+   display: flex;
+   justify-content: space-between;
+}
+
+.flip {
+   max-width: 100%;
+}
+.flip__body {
+   position: relative;
+   width: 100px;
+   height: 100px;
+
+   transition: all 2s ease 0s;
+   transform-style: preserve-3d;
+}
+
+.flip__front,
+.flip__back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.flip__front {
+   z-index: 2;
+   transform: rotateY(0deg);
+   background-color: indigo;
+   backface-visibility: hidden;
+}
+.flip__back {
+   transform: rotateY(-180deg);
+   background-color: lawngreen;
+}
+/* .flip:hover .flip__body {
+   transform: rotateY(-180deg);
+} */
+.super {
+   position: absolute;
+   z-index: 50;
+}
